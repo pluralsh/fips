@@ -1,1 +1,1 @@
-# go-fips
+# FIPS-compliant Images
