@@ -3,7 +3,8 @@
 ARG UBI_MINIMAL_VERSION="latest"
 FROM registry.access.redhat.com/ubi8/ubi-minimal:${UBI_MINIMAL_VERSION} AS go
 
-ARG GO_VERSION=1.23.2
+ARG GO_FIPS_VERSION=go1.23.4-1-openssl-fips
+ARG GO_VERSION=1.23.4
 ARG TARGETARCH
 ARG PLATFORM_ARCH=amd64
 
@@ -23,10 +24,9 @@ RUN curl -LO https://go.dev/dl/go${GO_VERSION}.linux-${PLATFORM_ARCH}.tar.gz && 
 
 ENV PATH="$PATH:/usr/go/bin"
 
-ARG GO_RELEASE_VERSION=${GO_VERSION}
 RUN git clone \
     https://github.com/golang-fips/go \
-    --branch go${GO_RELEASE_VERSION}-openssl-fips \
+    --branch ${GO_FIPS_VERSION} \
     --single-branch \
     --depth 1 \
     /tmp/go

@@ -5,7 +5,12 @@ on:
     inputs:
       version:
         description: 'Go version'
-        default: '1.23.2'
+        default: '1.23.4'
+        required: true
+        type: string
+      go_fips:
+        description: 'golang-fips/go/releases'
+        default: 'go1.23.4-1-openssl-fips'
         required: true
         type: string
 
@@ -65,3 +70,4 @@ jobs:
           cache-to: type=gha,mode=max
           build-args: |
             GO_VERSION=${{ inputs.version }}
+            GO_FIPS_VERSION=${{ inputs.go_fips }}
