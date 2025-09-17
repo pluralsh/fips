@@ -21,7 +21,7 @@ env:
 jobs:
   publish:
     name: Build and push go-fips image
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     permissions:
       contents: 'read'
       id-token: 'write'
