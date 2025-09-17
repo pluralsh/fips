@@ -3,8 +3,8 @@
 ARG UBI_MINIMAL_VERSION="latest"
 FROM registry.access.redhat.com/ubi8/ubi-minimal:${UBI_MINIMAL_VERSION} AS go
 
-ARG GO_FIPS_VERSION=go1.23.4-1-openssl-fips
-ARG GO_VERSION=1.23.4
+ARG GO_FIPS_VERSION=go1.25.1-1-openssl-fips
+ARG GO_VERSION=1.25.1
 ARG TARGETARCH
 ARG PLATFORM_ARCH=amd64
 

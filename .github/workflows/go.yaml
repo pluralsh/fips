@@ -38,8 +38,8 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/pluralsh/go-fips
-            docker.io/pluralsh/go-fips
+            ghcr.io/pluralsh/fips/go-fips
+            docker.io/pluralsh/fips/go-fips
           tags: |
             type=raw,value=${{ inputs.version }}
       - name: Set up QEMU
