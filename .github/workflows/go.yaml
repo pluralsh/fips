@@ -5,12 +5,12 @@ on:
     inputs:
       version:
         description: 'Go version'
-        default: '1.23.4'
+        default: '1.25.1'
         required: true
         type: string
       go_fips:
         description: 'golang-fips/go/releases'
-        default: 'go1.23.4-1-openssl-fips'
+        default: 'go1.25.1-1-openssl-fips'
         required: true
         type: string
 
